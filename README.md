@@ -230,3 +230,7 @@ Dockerfile ---> a set of instructions to create customised images
 FROM:
 ======
 FROM almalinux:9
+
+docker build -t from:version . ---> current docker has docker file
+-t ---> tag  
+. ----> log files
