@@ -231,7 +231,7 @@ FROM:
 ======
 FROM almalinux:9
 
-docker build -t from:version . ---> current docker has docker file
+docker build -t from:v1 . ---> current docker has docker file
 -t ---> tag  
 . ----> log files
 docker images
@@ -243,3 +243,11 @@ RUN commands
 
 RUN instracution configure the image like installing packages and doing some configurations
 RUN executes at the time of image building
+docker build -t run:v1 .
+
+# nginx run 
+systemctl start nginx ---> It will run service files ---> etc/systemd/system/nginx.service
+it command will execute 
+CMD ["nginx", "-g", "daemon off";]
+
+-g means set the configuration directories
