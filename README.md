@@ -234,3 +234,12 @@ FROM almalinux:9
 docker build -t from:version . ---> current docker has docker file
 -t ---> tag  
 . ----> log files
+docker images
+docker pull alpine ---> It gives very base min os 
+# configure the image and install dependies
+RUN:
+=====
+RUN commands
+
+RUN instracution configure the image like installing packages and doing some configurations
+RUN executes at the time of image building
