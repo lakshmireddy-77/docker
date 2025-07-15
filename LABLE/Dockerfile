@@ -1,4 +1,4 @@
 FROM almalinux:9
 LABEL COURSE="devops"\
-        TRAINER="siva"
+        TRAINER="siva"\
         DURATION="120hrs"
