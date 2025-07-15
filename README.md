@@ -279,4 +279,8 @@ but we cannot have multiple CMD commands. CMD should be only instrcution inside 
 COPY:
 ======
 It will copy the local code into container 
-deamn off ---> run the deamon on background 
+deamon off ---> run the deamon on background 
+docker build -t copy:v1 .
+docker ps
+docker rm -f `docker ps -a -q `
+docker run -d -p 80:80 --name copy nginx
