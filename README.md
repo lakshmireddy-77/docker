@@ -174,22 +174,22 @@ when you run AMI it is called server, server is running instance of AMI
 container is running instance of image
 
 docker images ---> It will show images that avaliable in system
-docker pull <image_name>:<tag/version> ---To get the image
+docker pull <image_name>:<tag/version> ---To get/download the image
 docker pull <image_name> --> It will take latest image
-
+docker images 
 * from where it is taking images (docker hub)
 * now we need to create container from the image
 
-# docker create nginx
+docker create nginx ---> to create container
 docker ps -a ----> It will all containsers including all status 
 # start the container
 docker start <container_id>
 docker ps 
 # to remove container
-docker rm <container_ID>
+docker rm -f <container_ID>
 
 # to remove image , if we remove image container also removed
-docker rmi nginx
+docker rmi  nginx
 # instead of create container, pull image ,start container we can use
 docker run <image>:<tag> ---> But it block the terminal, It is foreground
 docker run -d <image> ---> To dettaching the output to the screen, It will run in the background
@@ -212,7 +212,7 @@ docker run -d -p 80:80 --name: nginx nginx
 
 # how to login into container
 docker exec -it nginx bash
--it --> internet terminal
+-it --> interactive terminal
 # checking the nginx configuration
 cat /etc/nginx/nginx.conf
 # to check container IP(server-check)
@@ -226,6 +226,7 @@ docker logs nmginx
 ===============================
 
 Dockerfile ---> a set of instructions to create customised images
+
 # 1st we need base image
 FROM:
 ======
@@ -241,8 +242,9 @@ RUN:
 =====
 RUN commands
 
-RUN instracution configure the image like installing packages and doing some configurations
+RUN instruction configure the image like installing packages and doing some configurations
 RUN executes at the time of image building
+we can have multiple run commands beacuse we will install lot of packages
 docker build -t run:v1 .
 
 # nginx run 
@@ -250,4 +252,31 @@ systemctl start nginx ---> It will run service files ---> etc/systemd/system/ngi
 it command will execute 
 CMD ["nginx", "-g", "daemon off";]
 
--g means set the configuration directories
+-g ---> means set the configuration directories
+
+# what happen if i remove run:v1 in the file
+
+docker rmi -f run:v1
+docker images
+docker build -t cmd:v1 
+docker images.
+here we gave base image is run:v1 but here we can't see image for that the it will docker hub
+
+docker pull nginx ---> first it will check in locally is there any nginx image, if doesn't exstis it will check in docker hub
+we will get error 
+then go to run floder
+docker build -t run:v1 .
+docker images
+CMD:
+=====
+It will run/executes at the time of container creation
+i.e at the time of docker run
+then
+docker run -d cmd:v1
+docker ps
+but we cannot have multiple CMD commands. CMD should be only instrcution inside docker file
+
+COPY:
+======
+It will copy the local code into container 
+deamn off ---> run the deamon on background 
