@@ -315,3 +315,18 @@ it is like a tag it can conatin key values pairs.
 It can used at the time of fliteration
 ex: we have multiple images so we want filter using lables 
 docker images  --filter label=COURSE="devops"
+# how can you push the images to docker hub
+log into dockerhub:
+
+docker login -u lakshmi315
+
+docker push label
+
+it will give an error. for this we need to retag the lables
+docker tag label:v1 lakshmi315/label:v1
+docker push lakshmi315/label:v1
+
+EXPOSE:
+=======
+It can be used for users to see the which port is open. 
+This for doc purpose not for any funcxtionlity
