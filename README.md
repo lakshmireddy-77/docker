@@ -363,4 +363,10 @@ docker run entry:v1 ping facebook.com
 docker ps -a --no-trunc
 "ping google.com ping facebook.com"  ---o/p for entrypont
 
- 
+ we can use combination of CMD and entrypoint for better results, Entrypoint will have command. default args can be suppied by CMD
+ you can also overrides the default args throught the command line
+ docker exec -it <container_id> bash ----> login we are getting root acess
+ does containser have separate storage or it will use host storage ??
+ it uses whatever the host it uss the host storage
+ - if we give root acess to conainer it will block entire storage
+user ----> for this we need to craete a user and use that user
