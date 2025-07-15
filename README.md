@@ -340,5 +340,11 @@ docker push lakshmi315/expose:v1 --- to push the image
 ENV:
 =====
 this variables are accesable inside contaier
+docker build -t lakshmi315/env:v1 .
+docker run -d lakshmi315/env:v1
+docker ps -a
+It is exited beacause we haven't give any command to run
+here i cannot use daemon beacuse we are not installling nginx instead i will give 
+CMD ["sleep","1000"]
 
  
