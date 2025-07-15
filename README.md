@@ -289,3 +289,8 @@ ADD:
 ======
 COPY and ADD both copies the code from local to conatiner, but it has 2 advantages
 it can directly fetch the file from the internet 
+docker rm -f copy
+docker build -t add:v1 
+docker run -d -p 80:80 --name add add:v1 
+
+* here it will download the file but it can directly give the read acess no we need to do that
