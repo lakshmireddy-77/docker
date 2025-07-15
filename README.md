@@ -356,6 +356,11 @@ ENTYPOINT:
 docker run entry:v1
 it continously running on foreground
 docker ps -a 
-we can overrides the CMD command 
+we can overrides the CMD instrcutions 
+we can't override the entrypoint instrcutions, if we try it will over rides 
+docker run entry:v1 ping facebook.com
+# to see th erros/full info
+docker ps -a --no-trunc
+"ping google.com ping facebook.com"  ---o/p for entrypont
 
  
