@@ -330,3 +330,15 @@ EXPOSE:
 =======
 It can be used for users to see the which port is open. 
 This for doc purpose not for any funcxtionlity
+docker build -t lakshmi315/expose:v1 .
+docker inspect lakshmi315/expose:v1 ---> to check ports
+docker push lakshmi315/expose:v1
+--- her if we give run in the from command 1st it will check local so we can directly give
+lakshmi315/run:v1
+docker push lakshmi315/expose:v1 --- to push the image
+
+ENV:
+=====
+this variables are accesable inside contaier
+
+ 
