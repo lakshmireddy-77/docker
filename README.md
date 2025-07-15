@@ -346,5 +346,11 @@ docker ps -a
 It is exited beacause we haven't give any command to run
 here i cannot use daemon beacuse we are not installling nginx instead i will give 
 CMD ["sleep","1000"]
+# to login into container
+docker exec -it <container_id> bash
+env ---> it will show envi variables
+
+ENTYPOINT:
+===========
 
  
