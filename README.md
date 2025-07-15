@@ -352,5 +352,10 @@ env ---> it will show envi variables
 
 ENTYPOINT:
 ===========
+ docker build -t entry:v1 .
+docker run entry:v1
+it continously running on foreground
+docker ps -a 
+we can overrides the CMD command 
 
  
