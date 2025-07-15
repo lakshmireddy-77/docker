@@ -289,6 +289,7 @@ ADD:
 ======
 COPY and ADD both copies the code from local to conatiner, but it has 2 advantages
 it can directly fetch the file from the internet 
+it can directly untar the files into conatiners
 docker rm -f copy
 docker build -t add:v1 
 docker run -d -p 80:80 --name add add:v1 
@@ -297,3 +298,18 @@ docker run -d -p 80:80 --name add add:v1
 docker rm -f add
 docker build -t add:v1 
 docker run -d -p 80:80 --name add add:v1 
+# to see the content
+docker exec -it add bash
+cd /usr/share/nginx/html
+
+----------------------------------------
+----------------------------------------
+df -hT ---> here we are increasing /var
+/var/lib/docker ---> here containers are stored/ home directory 
+* imges count is increased then memory usage alos increased
+* so here we need to increase the /var floder size
+
+LABLE:
+======
+it is like a tag it can conatin key values pairs. 
+It can used at the time of fliteration
