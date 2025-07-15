@@ -313,3 +313,5 @@ LABLE:
 ======
 it is like a tag it can conatin key values pairs. 
 It can used at the time of fliteration
+ex: we have multiple images so we want filter using lables 
+docker images  --filter label=COURSE="devops"
