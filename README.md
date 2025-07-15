@@ -284,3 +284,8 @@ docker build -t copy:v1 .
 docker ps
 docker rm -f `docker ps -a -q `
 docker run -d -p 80:80 --name copy nginx
+
+ADD:
+======
+COPY and ADD both copies the code from local to conatiner, but it has 2 advantages
+it can directly fetch the file from the internet 
