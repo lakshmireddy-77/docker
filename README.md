@@ -294,3 +294,6 @@ docker build -t add:v1
 docker run -d -p 80:80 --name add add:v1 
 
 * here it will download the file but it can directly give the read acess no we need to do that
+docker rm -f add
+docker build -t add:v1 
+docker run -d -p 80:80 --name add add:v1 
