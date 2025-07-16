@@ -1,6 +1,8 @@
-FROM almalinux:6
+FROM almalinux:9
+#CMD ["ping","google.com"]
 RUN dnf install git -y
-RUN useradd lakshmi
-USER lakshmi
+RUN useradd sivakumar
+
+USER sivakumar
 CMD ["google.com"]
 ENTRYPOINT ["ping"]
