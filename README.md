@@ -374,4 +374,5 @@ user ----> for this we need to craete a user and use that user
 WORKDIR:
 ===========
 docker build -t workdir:v1 . 
-docker build -t workdir:v1 --no-cache --progress=plain .
+docker build -t workdir:v1 --no-cache --progress=plain . --> for human reable
+docker exec -it <CID> bash
