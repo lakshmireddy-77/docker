@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Docker
 
 Java/j2EE
@@ -376,3 +377,6 @@ WORKDIR:
 docker build -t workdir:v1 . 
 docker build -t workdir:v1 --no-cache --progress=plain . --> for human reable
 docker exec -it <CID> bash
+=======
+# Docker
+>>>>>>> c24a1af649102d162b196a901f95a3e8e22cb2da
