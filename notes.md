@@ -210,7 +210,6 @@ docker rm -f `docker ps -a -q`
 docker run -d -p 80:80 --name: nginx nginx
 # here name is unique
 
-
 # how to login into container
 docker exec -it nginx bash
 -it --> interactive terminal
