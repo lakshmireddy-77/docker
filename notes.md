@@ -381,3 +381,14 @@ docker exec -it <CID> bash
 ARGS:
 ======
 It is like a env variable it contain key value pairs
+docker build -t arg:v1 . --progress=plain --no-cache
+here are we can able to acess the argfs and variables
+docker run -d arg:v1
+docker exec -it aa bash
+env
+Here we are not get the args .ARG is a build time variable
+they can't be accsesed inside the containers.
+ENV can be acessed build time and inside container also
+
+# we can override also
+--
