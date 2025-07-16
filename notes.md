@@ -375,6 +375,9 @@ WORKDIR:
 ===========
 docker build -t workdir:v1 . 
 docker build -t workdir:v1 --no-cache --progress=plain . --> for human reable
+docker run -d workdir:v1
 docker exec -it <CID> bash
 
-x
+ARGS:
+======
+It is like a env variable it contain key value pairs
