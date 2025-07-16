@@ -370,3 +370,6 @@ docker ps -a --no-trunc
  it uses whatever the host it uss the host storage
  - if we give root acess to conainer it will block entire storage
 user ----> for this we need to craete a user and use that user
+
+WORKDIR:
+===========
