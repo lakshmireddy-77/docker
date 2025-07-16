@@ -391,4 +391,13 @@ they can't be accsesed inside the containers.
 ENV can be acessed build time and inside container also
 
 # we can override also
---
+docker build -t arg:v1 . --progress=plain --no-cache --build-arg trainer=lakshmi
+arg instrcution variables can be overriden
+
+In an exceptional case ARG can bethe 1st instrcution to supply to base OS in from 
+you can't use that version after from instrcution
+# how we can acess args inside container
+
+ONBUILD:
+========
+while developing images you can put some conditions while others are using your images
