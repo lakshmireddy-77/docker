@@ -401,3 +401,10 @@ you can't use that version after from instrcution
 ONBUILD:
 ========
 while developing images you can put some conditions while others are using your images
+docker build -t onbuild-test:v1 --progress=plain --no-cache .
+docker run -d -p 80:80 onbuild-test:v1
+<ip public ip> in browser
+
+ROBOSHOP:
+==========
+mongodb --7 version ---> official image fromdocker hub
