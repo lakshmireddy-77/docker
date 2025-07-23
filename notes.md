@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Docker
 
 Java/j2EE
@@ -62,7 +62,7 @@ user
 payment
 
 * here all components are separted , if one component is not work remaning components are working
-* every component can devlope in diffrent programming lanaguge
+* every component can develop in diffrent programming lanaguge
 * loose copuling, less dependency
 
 # real time example
@@ -128,6 +128,7 @@ VM ----> hardware ---> Host OS ---> hypervisior ---> guest OS ---> applications
 * hypervisior -- logically divides physical hardware into multiple servers
 * guest os means we can use windows,ubunut or any os
 * here we need to mange hypervisior
+* manage ---> hard
 * os take more memory
 
 vm physical server ---> hardware ---> host OS ---> containers
@@ -139,12 +140,12 @@ vm physical server ---> hardware ---> host OS ---> containers
 
 ## VM                         Containers
 =======                       ==========  
-costly							costly
-more time						less time
-more size						less size
-more resources					less resources
-resources block					dynamic resources allocation
-hypervisior						no need of extra components                 
+costly							            costly
+more time						            less time
+more size						             less size
+more resources					          less resources
+resources block					          dynamic resources allocation
+hypervisior						            no need of extra components                 
 not protable                    portable
 more security                   less security 
 
@@ -172,14 +173,22 @@ AMI ---> OS + configuration(system packages + app runtime + app librairies )
 image ---> bare min os + system packages + app runtime + app librairies
 
 when you run AMI it is called server, server is running instance of AMI
-container is running instance of image
+container is running instance of image (image ---> run ---> container)
 
-docker images ---> It will show images that avaliable in system
+docker images
+-------------
+ It will show images that avaliable in system
+ It is read only template used to craete conatiners
+
 docker pull <image_name>:<tag/version> ---To get/download the image
 docker pull <image_name> --> It will take latest image
 docker images 
 * from where it is taking images (docker hub)
 * now we need to create container from the image
+docker container
+----------------
+it is the live application created from image
+we can run,stop and delete the conatiners
 
 docker create nginx ---> to create container
 docker ps -a ----> It will all containsers including all status 
@@ -193,12 +202,14 @@ docker rm -f <container_ID>
 docker rmi  nginx
 # instead of create container, pull image ,start container we can use
 docker run <image>:<tag> ---> But it block the terminal, It is foreground
-docker run -d <image> ---> To dettaching the output to the screen, It will run in the background
+docker run -d <image> ---> To dettaching the output to the screen, It will run in the background. 
+everytime we are running docker run command it will create conatiners
 
 # here nginx is running how we can access
 we can get using ports
 # docker diagram
-
+conatiner is like a mini sever
+0 to 
 docker run -d -p 80:80 <image>
 # we cannot use same local port again
 # to see the conatiner id's
@@ -208,6 +219,9 @@ docker rm -f `docker ps -a -q`
 
 # docker gave random names while creating the conatiner. we want to give required name
 docker run -d -p 80:80 --name: nginx nginx
+
+--name: nginx ----> name of the conatiner
+nginx ---> nginx conainer
 # here name is unique
 
 # how to login into container
