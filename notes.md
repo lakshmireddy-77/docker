@@ -67,51 +67,51 @@ payment
 
 # real time example
 
-Joint Families vs Small Families vs Individuals
-================================================
+## Joint Families vs Small Families vs Individuals
+
 15-20 members --> .ear file --> Physical Server --> Dedicated Host
 Big House
 
-Landed House
-=============
+**Landed House**
 
-advantages
-==========
+
+**advantages**
+
 Privacy
 
-Disadvantages
-============
+## Disadvantages
+
 Costly
 More time to construct
 Maintanace --> Electricity, Water, Security etc.
 
-Small Families
-==============
+## Small Families
+
 4 members  --> VM --> Shared
 small flat --> 1bhk or 2bhk
 
-advantages
-==========
+**advantages**
+
 less cost
 less time to construct
 no maintanance
 
-disadvantages
-============
+**disadvantages**
+
 privacy
 
 Individuals --> Microservices
-==============
+
 hostels, pgs --> Containers
 
-advantages
-==========
+**advantages**
+
 least cost
 less time
 no maintanance
 
-disadvantages
-==========
+**disadvantages**
+
 0 privacy
 
 ## diagram
