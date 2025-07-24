@@ -1,5 +1,4 @@
 FROM almalinux:9
-LABEL COURSE="devops"\
-        TRAINER="siva"\
-        DURATION="120hrs"\
-        lakshmi.reddy.site="lakshmi@gmail.com"
+LABEL COURSE="DevOps321" \
+        DURATION="120hr" \
+        TRAINER= "siva"
