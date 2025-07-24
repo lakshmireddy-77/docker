@@ -5,6 +5,6 @@ ENV COURSE="devops"\
         
 ARG tranier="siva"
 # this is for args can be passed to the conatiner
-ENV tranier=$tranier 
+# ENV tranier=$tranier 
 RUN echo "Hi course is {{ $COURSE }}, Tranier is {{ $TRAINER }}, duration is {{ $DURATION }}"
 CMD ["sleep","1000"]
