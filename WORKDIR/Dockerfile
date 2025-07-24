@@ -1,8 +1,6 @@
 FROM almalinux:9
-RUN mkdir /tmp/workdir-demo
-#RUN cd /tmp/workdir-demo ---> Cd not work here
-WORKDIR /tmp/workdir-demo
+RUN mkdir /tmp/work-demo/
+RUN cd /tmp/work-demo/
 RUN pwd
-RUN echo "I am in working directory " > hello.txt
-# to keep the container busy
+RUN echo "Hello world" > hello.txt
 CMD ["sleep", "1000"]
